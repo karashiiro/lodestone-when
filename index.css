@@ -50,14 +50,14 @@ footer {
     }
 
     h1 {
-        font-size: 34pt;
+        font-size: 38pt;
     }
 
     p, a {
-        font-size: 20pt;
+        font-size: 28pt;
     }
 
     input {
-        font-size: 18pt;
+        font-size: 26pt;
     }
 }
