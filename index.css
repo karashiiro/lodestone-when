@@ -49,6 +49,11 @@ footer {
         width: 90%;
     }
 
+    .wrapper h1 {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
     h1 {
         font-size: 34pt;
     }
