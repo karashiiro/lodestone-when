@@ -5,9 +5,19 @@
         %script(type="text/javascript" src="./lwhen.js" )
         %link(rel="stylesheet" href="./index.css")
     %body
-        %h1 Lodestone When
-        %p Estimate when a FFXIV character was created with just its Lodestone ID!
-        .estimation
-            %input(type="text" id="lodestone-id")
-            %input(type="button" value="Estimate" onClick="parseId()")
-            %p(id="creation-time")
+        .content
+            .wrapper
+                %h1 Lodestone When
+                %p Estimate when a FFXIV character was created with just its Lodestone ID!
+                .estimation
+                    %input(type="text" id="lodestone-id" placeholder="Lodestone ID")
+                    %input(type="button" value="Estimate" onClick="parseId()")
+                    %p(id="creation-time")
+                .push
+            %footer
+                %a(class="ref" href="https://github.com/karashiiro/lodestone-id-time")
+                    %img(class="ref-image" src="./i/github.png" height="21" width="21")
+                    lodestone-id-time
+                %a(class="ref" href="https://github.com/karashiiro/lodestone-when")
+                    %img(class="ref-image" src="./i/github.png" height="21" width="21")
+                    lodestone-when

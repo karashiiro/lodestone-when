@@ -3,7 +3,7 @@ function parseId() {
     var outField = document.getElementById("creation-time");
 
     var idStr = inputField.value;
-    if (idStr.match(/\D/g)) {
+    if (idStr.length === 0 || idStr.match(/\D/g)) {
         outField.setAttribute("class", "error");
         outField.innerText = "Invalid Lodestone ID";
         return;
