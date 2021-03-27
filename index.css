@@ -43,3 +43,21 @@ footer {
 .error {
     color: red;
 }
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 34pt;
+    }
+
+    p, a {
+        font-size: 20pt;
+    }
+
+    input {
+        font-size: 18pt;
+    }
+}
