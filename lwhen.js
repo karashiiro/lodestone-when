@@ -1,4 +1,20 @@
-function parseId() {
+/**
+ * Parses the ID from the query parameter in the URL.
+ */
+function parseIdFromUrl(event) {
+    var url = new URL(document.location);
+    var id = url.searchParams.get("id");
+    if (id != null) {
+        var inputField = document.getElementById("lodestone-id");
+        inputField.value = id;
+        parseId(event != null);
+    }
+}
+
+/**
+ * Parses the ID from the page input field.
+ */
+function parseId(noClobber) {
     var inputField = document.getElementById("lodestone-id");
     var outField = document.getElementById("creation-time");
 
@@ -12,6 +28,12 @@ function parseId() {
     var id = parseInt(idStr);
     outField.setAttribute("class", "");
     outField.innerText = lodestoneIdTime(id);
+
+    var url = new URL(window.location.href);
+    url.searchParams.set("id", "" + id);
+    if (!noClobber) {
+        window.history.pushState({ id }, document.title, url);
+    }
 }
 
 /**
@@ -34,3 +56,6 @@ function lodestoneIdTime(id) {
     var unixMs = (excelTime - 25569) * 86400000;
     return new Date(unixMs);
 }
+
+window.onpopstate = parseIdFromUrl;
+window.onload = parseIdFromUrl;
