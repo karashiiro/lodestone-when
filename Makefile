@@ -15,7 +15,7 @@ publish: ## Publish the website to GitHub pages
 	git branch gh-pages
 	git checkout gh-pages
 	@make build
-	rm README.md index.haml .gitignore LICENSE
+	-rm README.md index.haml .gitignore LICENSE
 	git add index.html
 	git commit -a -m "Remove unnecessary files"
 	git push --set-upstream origin gh-pages -f
