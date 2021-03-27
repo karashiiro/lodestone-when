@@ -1,0 +1,13 @@
+%html
+    %head
+        %title Lodestone When
+        %meta(charset="utf-8")
+        %script(type="text/javascript" src="./lwhen.js" )
+        %link(rel="stylesheet" href="./index.css")
+    %body
+        %h1 Lodestone When
+        %p Estimate when a FFXIV character was created with just its Lodestone ID!
+        .estimation
+            %input(type="text" id="lodestone-id")
+            %input(type="button" value="Estimate" onClick="parseId()")
+            %p(id="creation-time")
