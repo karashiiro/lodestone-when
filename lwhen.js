@@ -1,5 +1,6 @@
 /**
  * Parses the ID from the query parameter in the URL.
+ * @param {PopStateEvent} event
  */
 function parseIdFromUrl(event) {
     var url = new URL(document.location);
@@ -13,6 +14,7 @@ function parseIdFromUrl(event) {
 
 /**
  * Parses the ID from the page input field.
+ * @param {boolean} noClobber Whether or not to push a new item to the history stack.
  */
 function parseId(noClobber) {
     var inputField = document.getElementById("lodestone-id");
