@@ -11,5 +11,5 @@ publish:
 	git branch gh-pages
 	git checkout gh-pages
 	rm README.md index.haml .gitignore LICENSE
-	git commit -a -m "Remove unnecessary files."
+	git commit -a -m "Remove unnecessary files"
 	git push --set-upstream origin gh-pages
