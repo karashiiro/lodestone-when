@@ -1,11 +1,15 @@
 SHELL :=/bin/bash
+.DEFAULT_GOAL := help 
 
-build: # run file processors to build the website
+help: ## Show this help
+	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+build: ## Run file processors to build the website
 	@echo Building project...
 	@haml ./index.haml index.html
 	@echo Done!
 
-publish: # publish the website to GitHub pages
+publish: ## Publish the website to GitHub pages
 	git checkout main
 	-git branch -D gh-pages
 	git branch gh-pages
