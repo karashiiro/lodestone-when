@@ -6,7 +6,6 @@ function parseIdFromUrl(event) {
     var url = new URL(document.location);
     var id = url.searchParams.get("id");
     if (id != null) {
-        var inputField = document.getElementById("lodestone-id");
         inputField.value = id;
         parseId(event != null);
     }
@@ -17,9 +16,6 @@ function parseIdFromUrl(event) {
  * @param {boolean} noClobber Whether or not to push a new item to the history stack.
  */
 function parseId(noClobber) {
-    var inputField = document.getElementById("lodestone-id");
-    var outField = document.getElementById("creation-time");
-
     var idStr = inputField.value;
     if (idStr.length === 0 || idStr.match(/\D/g)) {
         outField.setAttribute("class", "error");
@@ -58,6 +54,9 @@ function lodestoneIdTime(id) {
     var unixMs = (excelTime - 25569) * 86400000;
     return new Date(unixMs);
 }
+
+var inputField = document.getElementById("lodestone-id");
+var outField = document.getElementById("creation-time");
 
 window.onpopstate = parseIdFromUrl;
 window.onload = parseIdFromUrl;
