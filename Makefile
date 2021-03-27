@@ -5,7 +5,7 @@ build: # run file processors to build the website
 	haml ./index.haml index.html
 	@echo Done!
 
-publish:
+publish: # publish the website to GitHub pages
 	git checkout main
 	-git branch -D gh-pages
 	git branch gh-pages
