@@ -45,18 +45,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 34pt;
-    }
-
-    p, a {
-        font-size: 16pt;
-    }
-
-    input {
-        font-size: 14pt;
-    }
-
     footer {
         height: 70px;
         margin-top: -70px;
