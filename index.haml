@@ -1,17 +1,22 @@
+-title="Lodestone When"
+-description="Lodestone When allows you to estimate when a FFXIV character was created with just its Lodestone ID."
+-twitter="@karashiiro1"
+-author="karashiiro"
+
 %html(lang="en-US")
     %head
-        %title Lodestone When
+        %title=title
         %meta(charset="utf-8")
         %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        %meta(name="author" content="karashiiro")
-        %meta(name="description" content="Lodestone When allows you to estimate when a FFXIV character was created with just its Lodestone ID.")
-        %meta(property="og:description" content="Lodestone When allows you to estimate when a FFXIV character was created with just its Lodestone ID.")
+        %meta(name="author" content=author)
+        %meta(name="description" content=description)
+        %meta(property="og:description" content=description)
         %meta(property="og:url" content="https://karashiiro.github.io/lodestone-when")
         %meta(property="og:type" content="website")
-        %meta(property="og:title" content="Lodestone When")
-        %meta(name="twitter:title" content="Lodestone When")
-        %meta(name="twitter:site" content="@karashiiro1")
-        %meta(name="twitter:creator" content="@karashiiro1")
+        %meta(property="og:title" content=title)
+        %meta(name="twitter:title" content=title)
+        %meta(name="twitter:site" content=twitter)
+        %meta(name="twitter:creator" content=twitter)
         %meta(name="theme-color" content="#f73b5a")
         %meta(name="robots" content="index, follow")
         %script(type="text/javascript" src="./lwhen.js" defer)
